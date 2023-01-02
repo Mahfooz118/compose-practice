@@ -12,12 +12,12 @@ stages{
 								steps{
 								            sh "rm -rf *"
 											
-									     	sh "git clone https://github.com/Mahfooz118/compose-practice.git"
-								            sh "sudo yum install docker -y"
+									         	sh "git clone https://github.com/Mahfooz118/compose-practice.git"
+								                        sh "sudo yum install docker -y"
 											sh "sudo systemctl start docker"
 											
-											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/compose/docker-compose.yaml"
-		                                    sh " sudo cd /mnt/slave/wars/compose-practice/compose"
+											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/docker-compose.yaml"
+		                                                                        sh " sudo cd /mnt/slave/compose-practice/wars"
 
 											sh "docker-compose up -d --scale tomcat=2"
 								}
@@ -37,8 +37,8 @@ stages{
 									     	sh "git clone https://github.com/Mahfooz118/compose-practice.git"
 								            sh "sudo yum install docker -y"
 											sh "sudo systemctl start docker"
-											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/compose/docker-compose.yaml"
-                                            sh " sudo cd /mnt/slave/wars/compose-practice/compose"
+											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/docker-compose.yaml"
+                                                                                        sh " sudo cd /mnt/slave/wars/compose-practice/compose"
 											sh "docker-compose up -d --scale tomcat=2"
 								}
 			}
