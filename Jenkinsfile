@@ -23,7 +23,7 @@ stages{
 									                
 									                sh "sudo chmod +x /usr/bin/docker-compose"
 
-											sh "docker-compose up -d --scale tomcat=2"
+											sh "sudo docker-compose up -d --scale tomcat=2"
 								}
 								
 			}
@@ -48,7 +48,7 @@ stages{
 									                
 									                sh "sudo chmod +x /usr/bin/docker-compose"
 
-											sh "docker-compose up -d --scale tomcat=2"
+											sh "sudo docker-compose up -d --scale tomcat=2"
 								}
 			}
 			
