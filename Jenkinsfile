@@ -17,7 +17,7 @@ stages{
 											sh "sudo systemctl start docker"
 											
 											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/docker-compose.yaml"
-		                                                                        sh " sudo cd /mnt/slave/compose-practice/wars"
+		                                                                        sh " sudo cd /mnt/slave"
 
 											sh "docker-compose up -d --scale tomcat=2"
 								}
@@ -38,7 +38,7 @@ stages{
 								            sh "sudo yum install docker -y"
 											sh "sudo systemctl start docker"
 											sh "sudo chmod 777 /mnt/slave/wars/compose-practice/docker-compose.yaml"
-                                                                                        sh " sudo cd /mnt/slave/wars/compose-practice/compose"
+                                                                                        sh " sudo cd /mnt/slave"
 											sh "docker-compose up -d --scale tomcat=2"
 								}
 			}
